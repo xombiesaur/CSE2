@@ -1,3 +1,4 @@
+/*Decimal display..er? thing by David Chase Brewster */
 import java.util.*;
 public class FourDigits {
 	public static void main(String[] args){
