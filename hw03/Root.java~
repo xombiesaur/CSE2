@@ -1,0 +1,14 @@
+import java.util.*;
+public class Root{
+	public static void main(String [] Args){
+		Scanner console = new Scanner(System.in);
+		System.out.println("Enter a double and I print the cube root");
+		double x = console.nextDouble();
+		double guess = x/3;
+		for (int i=0; i<=9;i++){
+			guess=((2*guess*guess*guess+x)/(3*guess*guess));
+		}
+		System.out.printf("The cube root is: %.5f\n",guess);
+	}
+}
+			

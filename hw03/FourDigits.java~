@@ -1,0 +1,12 @@
+import java.util.*;
+public class FourDigits {
+	public static void main(String[] args){
+		Scanner console = new Scanner(System.in);
+		System.out.println("Enter a double and I display the 4 digits to the right of the decimal: ");
+		double userInput = console.nextDouble();
+		int userInt = (int) userInput;
+		double newUserNum = (userInput-userInt)*10000;
+		int newUserNum2= (int) newUserNum;
+		System.out.printf("The four numbers are %4d\n",newUserNum2);
+	}
+}

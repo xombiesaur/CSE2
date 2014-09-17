@@ -1,0 +1,22 @@
+import java.util.*;
+public class Bicycle{
+	public static void main(String [] Args){
+		int inchInMile= 63360;
+		int tireSize = 27;
+		double Pi = 3.14159;
+		int timeMultiConstant = 60;
+		Scanner console = new Scanner(System.in);
+		System.out.print("Enter time in seconds: ");
+		double time = console.nextDouble();
+		System.out.print("Enter the amount of turns: ");
+		double turns = console.nextDouble();
+		double rideDistanceInch = (turns*(tireSize*Pi));
+		double rideDistanceMile = (rideDistanceInch/inchInMile);
+		double timeMinutes = (time/timeMultiConstant);
+		double speed = (rideDistanceMile/(timeMinutes/timeMultiConstant));
+		System.out.printf("\nThe Distance was %.2f miles and took %.1f minutes\n",rideDistanceMile,timeMinutes);
+		System.out.printf("The average speed was %2.2f MPH\n",speed);
+		
+	
+	}
+}
