@@ -1,4 +1,5 @@
 import java.util.*;
+//Number Stack Loop By David Chase Brewster
 public class NumberStack {
 	public static void main (String args[]){
 		Scanner console = new Scanner(System.in);
@@ -12,6 +13,7 @@ public class NumberStack {
 		int l=0;
 		int m=0;
 		int n=0;
+		//for loop 
 		for (i= 1; i<=userNum; i++){
 			for (j= 0; j<i; j++){
 				for (k= 0; k<userNum-count; k++){
@@ -41,6 +43,7 @@ public class NumberStack {
 		m=0;
 		n=0;
 		count = 1;
+		//while loop 
 		while(i<=userNum){
 			while(j<i){
 				while(k<userNum-count){
@@ -79,6 +82,7 @@ public class NumberStack {
 		m=1;
 		count = 1;
 		System.out.print(" ");
+		//do while loop
 		do {
 			do {
 				do {
