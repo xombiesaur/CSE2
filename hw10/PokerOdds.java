@@ -5,16 +5,15 @@ public class PokerOdds{
     showHands();
     simulateOdds();
   }
-
 public static void showHands(){
-	userChoice = Y;
+	char userChoice = 'Y';
 	do{
 	Scanner console = new Scanner(System.in);
 	String [] ref = {"A","K","Q","J","10","9","8","7","6","5","4","3","2"};
 	String cString ="Clubs: ";
 	String dString ="Diamonds: ";
 	String hString ="Hearts: ";
-	String sString ="Spades: "
+	String sString ="Spades: ";
 	int [] hand = bernieMac();
 	for (int j=0;j<5;j++){
 		int choice = hand[j];
@@ -38,18 +37,18 @@ public static void showHands(){
 	System.out.println("Go Again? [Y or y] for yes anything else to quit");
 	userChoice = console.next().charAt(0);
 	userChoice = Character.toUpperCase(userChoice);
-	}while (userChoice == Y)
+	}while (userChoice == 'Y');
 }
 public static void simulateOdds(){
-	int total [] = new int[14];
-	String [] ref = {"A","K","Q","J","10","9","8","7","6","5","4","3","2"};
+	int total [] = new int[15];
+	String [] ref = {"A","K","Q","J","10","9","8","7","6","5","4","3","2","No Pair"};
 	for(int i=0;i<10000;i++){
-		int temp = exactlyOneDup(numberSort(bernieMac));
+		int temp = exactlyOneDup(numberSort(bernieMac()));
 		total[temp] +=1;
 	}
 	System.out.println("pair : number");
-	for (int j= 0;j<14;j++){
-	System.out.println(ref[j] +"   :  " total[j]);
+	for (int j= 0;j<15;j++){
+	System.out.println(ref[j] +"   :  " + total[j]);
 	}
 }
 public static int[] bernieMac(){
@@ -76,7 +75,7 @@ public static int[] numberSort(int [] num){
 		
 }
 public static int exactlyOneDup(int [] num){
-  		int result = 0;
+  		int result = 14;
 		int ArLn = num.length;
 		int c=0;
 		int pair = 0;
@@ -86,10 +85,10 @@ public static int exactlyOneDup(int [] num){
 				int check2 = num[j];
 				if (check == check2 && j!=i){
 					if (c<2){result= check2; c++;}
-					else{result=0}
+					else{result=14;}
 				}
 			}
 		}
 		return result;
   }
-}
+ }
