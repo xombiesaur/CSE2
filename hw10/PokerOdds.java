@@ -5,7 +5,7 @@ public class PokerOdds{
     showHands();
     simulateOdds();
   }
-}
+
 public static void showHands(){
 	userChoice = Y;
 	do{
@@ -92,3 +92,4 @@ public static int exactlyOneDup(int [] num){
 		}
 		return result;
   }
+}
